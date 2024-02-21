@@ -1,0 +1,95 @@
+<div class="container-fluid">
+  <h3 class="text-dark mb-1">ANALYSE DETAILS</h3>
+</div>
+<h1 class="fs-4 fw-bold">{{ analyse.nomAnalyse }}</h1>
+<div class="table-responsive">
+  <!-- Tableau pour afficher les détails de l'analyse -->
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th><strong>Value</strong></th>
+      <th>Status</th>
+      <th>Min value</th>
+      <th>Max value</th>
+      <th>unit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let numeration of numerations">
+      <td>{{ numeration.norme.libelle }}</td>
+      <td>{{ numeration.value }}</td>
+      <td>{{ numeration.statut }}</td>
+      <td>{{ numeration.norme.minValue }}</td>
+      <td>{{ numeration.norme.maxValue}}</td>
+      <td>{{ numeration.norme.unite }}</td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="container text-break border-0">
+  <div class="row">
+    <div class="col-md-12">
+      <h1></h1>
+      <h1 class="text-primary"><strong><em>Proprieties</em></strong></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <h1 class="text-secondary-emphasis">Patient</h1>
+      <ul>
+        <li>Name : {{ patient.nom }}</li>
+        <li>Tele : {{ patient.tel }}</li>
+        <li>Email : {{ patient.deleted }}</li>
+        <li>Adress : {{ patient.adresse }}</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <h1 class="text-secondary-emphasis">Echantillon</h1>
+      <ul>
+        <li>Date : {{ echantillon.datePrelevement }}</li>
+        <li>Type analyse : {{ echantillon.typeAnalyse }}</li>
+        <li>Status : {{ echantillon.Status }}</li>
+        <li>N° : {{ echantillon.idEchantillon }}</li>
+      </ul>
+    </div>
+    <div class="col-md-4">
+      <h1 class="text-secondary-emphasis">Responsable</h1>
+      <ul>
+        <li>Name : {{ utilisateur.nom }}</li>
+        <li>Tele : {{ utilisateur.tel }}</li>
+        <li>Email : {{ utilisateur.dateNaissance }}</li>
+        <li>Position : {{ utilisateur.role }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--<h1>Reactif</h1>-->
+<!--<div class="table-responsive">-->
+<!--  &lt;!&ndash; Tableau pour afficher les réactifs associés à l'analyse &ndash;&gt;-->
+<!--  <table class="table">-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--      <th>Name</th>-->
+<!--      <th>Nom fournisseur</th>-->
+<!--      <th>Date d'experation</th>-->
+<!--      <th>Quontity</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    <tr>-->
+<!--      <td>Cell 1</td>-->
+<!--      <td>Cell 2</td>-->
+<!--      <td>Cell 3</td>-->
+<!--      <td>Cell 4</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>Cell 3</td>-->
+<!--      <td>Cell 4</td>-->
+<!--      <td>Cell 3</td>-->
+<!--      <td>Cell 4</td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--  </table>-->
+<!--</div>-->
